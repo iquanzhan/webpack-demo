@@ -102,3 +102,21 @@ module.exports = {
 }
 ```
 
+## 添加热更新
+
+```
+npm install webpack-dev-server --save-dev
+```
+
+#### webpack中配置
+
+```
+"dev": "webpack-dev-server --inline --hot --open --port 8080 --host 127.0.0.1"
+```
+
+#### 运行
+
+```
+npm run dev
+```
+

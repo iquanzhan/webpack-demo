@@ -4,6 +4,6 @@ import './css/index.css';
 var app = new Vue({
     el: "#app",
     data: {
-        number: 0
+        number: 8
     }
 });

@@ -60,18 +60,7 @@ module.exports = {
 
 ```
 {
-  "name": "webpack-demo",
-  "version": "1.0.0",
-  "description": "```\r npm install webpack webpack-cli --save-dev\r ```",
-  "main": "index.js",
-  "dependencies": {
-    "css-loader": "^2.1.1",
-    "style-loader": "^0.23.1",
-    "vue": "^2.6.10",
-    "webpack-cli": "^3.3.0",
-    "webpack": "^4.29.6"
-  },
-  "devDependencies": {},
+  ...
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",                              //自定义命令
@@ -89,5 +78,27 @@ npm run build			//npm run为执行自定义的命令
 
 ```
 npm install --save-dev html-webpack-plugin
+```
+
+#### 导入插件
+
+```
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+```
+
+#### 在webpack中使用插件
+
+```
+module.exports = {
+    entry: './index.js',
+    ...
+    plugins:[
+        new HtmlWebpackPlugin({
+            title:'首页',
+            filename:'index.html',
+            template:'./index.html'
+        })
+    ]
+}
 ```
 

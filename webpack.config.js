@@ -1,3 +1,6 @@
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry: './index.js',
     output: {
@@ -14,5 +17,12 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    plugins:[
+        new HtmlWebpackPlugin({
+            title:'首页',
+            filename:'index.html',
+            template:'./index.html'
+        })
+    ]
 }
